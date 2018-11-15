@@ -3,9 +3,8 @@ class CreateMedias < ActiveRecord::Migration[5.2]
     create_table :medias do |t|
       t.string :title
       t.string :format
-      t.integer :year
-      t.string :director
-      t.string :actors
-    end 
+      t.string :year
+
+    end
   end
 end
