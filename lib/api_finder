@@ -1,0 +1,19 @@
+require "rest-client"
+require "json"
+require "pry"
+
+def search
+  puts "enter search api"
+  movie = gets.chomp
+  tracks = gets.chomp
+
+  api_string = RestClient.get("https://itunes.apple.com/search?term=shrek&entity=#{movie}&attribute=#{tracks}")
+  api_hash = JSON.parse(api_string)
+  # api_hash["results"].find {|result| result["artistName"] == "Greg Camp" || result["artistName"] == "Smash Mouth" }
+
+end
+
+
+
+binding.pry
+0

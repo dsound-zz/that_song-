@@ -1,4 +1,4 @@
 class Song < ActiveRecord::Base
-    has_many :song_medias
-    has_many :medias, through: :song_medias
+    has_many :song_media
+    has_many :media, through: :song_media
 end
